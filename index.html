@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>app-film</title>
+  </head>
+  <body>    
+     
+          <header>
+              <h1>Mega Film Action Serials</h1>
+              <p>Серіали для родини</p>
+          </header>
+                  <div class="overlay"></div>
+          <main>
+              <div class="search">
+                  <input id="search" type="text" placeholder="Введите название фильма">
+                  <button id="btn">Поиск</button>
+              </div>
+                      <img id="image" src="./public/img/image-4.jfif" alt="Film">
+              <div class="block-film">        
+                    <div id="movies">
+                    </div>
+                    <div class="movie-sidebar">
+                        <h2>Filter</h2>
+                        <ul>
+                            <li id="main">Главная</li>  
+                            <li id="serial">Серіали<i id="arrow" class="fa-solid fa-chevron-right"></i> 
+                              <ul id="list-open">
+                                  <li id="action">Action</li>
+                                  <li id="comedy">Comedy</li>
+                                  <li id="horror">Horror</li>
+                                  <li id="thriller">Thriller</li>
+                              </ul>
+                            </li>                     
+                        </ul>
+                    </div>
+
+              </div>
+          </main>
+          
+
+      
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
