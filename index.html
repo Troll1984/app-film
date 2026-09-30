@@ -7,25 +7,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>app-film</title>
   </head>
-  <body>    
-     
+  <body >   
+    <div class="wrapper">     
           <header>
-              <h1>Mega Film Action Serials</h1>
-              <p>Серіали для родини</p>
-          </header>
-                  <div class="overlay"></div>
+              <h1 class="text-3xl 450px:text-5xl 550px:text-7xl text-white font-bold ">Mega Film Action Serials</h1>
+              <p class="text-2xl 450px:text-2xl 550px:text-4xl text-white font-bold">Серіали для родини</p>
+          </header>                 
           <main>
-              <div class="search">
-                  <input id="search" type="text" placeholder="Введите название фильма">
-                  <button id="btn">Поиск</button>
+              <div class="search flex items-center gap-1 justify-center ">
+                  <input class="rounded-xl bg-white" id="search" type="text" placeholder="Введите название фильма">
+                  <button class="text-md font-bold rounded-xl" id="btn">Поиск</button>
               </div>
-                      <img id="image" src="./public/img/image-4.jfif" alt="Film">
-              <div class="block-film">        
-                    <div id="movies">
+                     
+              <div class="block-film flex gap-5 ">        
+                 <img id="image" src="./public/img/image-10.png" alt="Film">
+                    <div class="flex flex-wrap gap-20 " id="movies">
                     </div>
                     <div class="movie-sidebar">
-                        <h2>Filter</h2>
-                        <ul>
+                        <h2 class="text-center font-bold text-3xl">Filter</h2>
+                        <ul class="text-2xl">
                             <li id="main">Главная</li>  
                             <li id="serial">Серіали<i id="arrow" class="fa-solid fa-chevron-right"></i> 
                               <ul id="list-open">
@@ -40,6 +40,8 @@
 
               </div>
           </main>
+
+          </div> 
           
 
       
