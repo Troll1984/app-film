@@ -1,7 +1,10 @@
  @import "tailwindcss";
  @import "cssComponents/animation.css";
-  @import "cssComponents/main.css";
+ @import "cssComponents/main.css";
+ @import "cssComponents/comments.css";
   @theme {
+  --breakpoint-800px: 800px;
+  --breakpoint-1050px:1050px;
   --breakpoint-550px: 550px;
   --breakpoint-450px: 450px;
 }
@@ -9,10 +12,11 @@
     margin: 0;
     padding: 0;
     outline: none;
-    color: #fff;   
+      
 }
 body {
      background: url('../public/img/bg-1.jpg') no-repeat center / cover; 
+      background-attachment: fixed;
      width: 100%;
      height: auto;
 }
@@ -21,6 +25,7 @@ header {
     text-align: center;         
 }
 main {
+      
     margin: 0 auto;
     position: relative;
     width: 75%;
