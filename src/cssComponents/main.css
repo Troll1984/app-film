@@ -66,12 +66,12 @@ main #movies {
 }
  @media(max-width: 500px) {
     .search i {
-        font-size: 20px;
-        color: #fff;
+        font-size: 20px;        
     }
  }
 .search i {
     font-size: 30px;
+    color: #fff;
 }
 .search input:focus {
     box-shadow: 0px -1px 25px 8px rgba(127, 37, 155, 0.75);    
