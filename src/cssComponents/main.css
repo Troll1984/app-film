@@ -92,12 +92,14 @@ main #movies {
    z-index: 1000;
    top: 0;
    right: 0;   
-   height: 50%;
+   height: 75%;
+   width: 25%;
    background: url('../public/img/bg-1.jpg') no-repeat center / cover; 
    transform:  translateY(-100%);
    transition: transform 700ms ease;
    border-bottom-right-radius: 15px; 
    border-bottom-left-radius: 15px;
+   padding-top: 70px;
 }    
 .active-sidebar-menu {
     transform: translateY(0);
@@ -111,7 +113,7 @@ main #movies {
     cursor: pointer;    
 }
 .movie-sidebar ul li:hover {
-     background:  linear-gradient(136deg, rgb(28, 29, 29) 0%, rgb(58, 67, 78) 100%);
+     background:  hsla(0, 0%, 0%, 0.567);
      border-radius: 10px;
 }
 #list-open {
@@ -191,6 +193,9 @@ main #movies {
     }
     @media(max-width: 800px) {
        
+    }
+    @media(max-width: 500px) {
+        box-shadow: none;
     }
     
 }
