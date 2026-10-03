@@ -22,18 +22,22 @@ footer {
     }
 }
 #form-comments input {
-    width: 50%;
-    height: 30px;
+    width: 60%;
+    height: 40px;
     border-radius: 7px;    
     padding-left: 10px;
     background: #fff;
     color: #000;
+    @media(max-width: 800px){
+        width: 75%;
+        height: 50px;
+    }
    
    
 }
 #form-comments button {
-    width: 20%;
-    height: 30px;
+    width: 25%;
+    height: 40px;
     border-radius: 7px;
     background: url('../public/img/bg-1.jpg') no-repeat center / cover; 
     color: #fff;

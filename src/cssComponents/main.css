@@ -67,6 +67,7 @@ main #movies {
  @media(max-width: 500px) {
     .search i {
         font-size: 20px;
+        color: #fff;
     }
  }
 .search i {
