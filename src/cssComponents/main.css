@@ -17,8 +17,7 @@ main #movies {
     
 }
 .movie {  
-    width: 75%; 
-    
+    width: 75%;     
     display: flex;
     flex-direction: column;   
     gap: 10px;
@@ -32,12 +31,11 @@ main #movies {
               width: 40%; 
     }
     @media(max-width: 1050px) {
-               flex: 1;
+        width: 100%;
+        overflow-x: auto;
+        justify-content: flex-start;
     }
-    @media(max-width:500px) { 
-                 
-               flex: 0 0 300px;
-    }
+    
 }
 .movie img {
     width: 300px;
@@ -48,9 +46,13 @@ main #movies {
     border-radius: 15px;
    
 }
+.block-open {
+    width: 50%;
+}
 .movie img:hover {
     transform: scale(1.05);
 } 
+
 .movie h3 {
     width: 100%;
     font-size: 18px;
@@ -101,7 +103,7 @@ main #movies {
     color: #fff;   
 }
 .movie-sidebar {
-   position: absolute;
+   position:fixed;
    z-index: 1000;
    top: 0;
    right: 0;   
@@ -191,9 +193,6 @@ main #movies {
         object-fit: cover;
      }
   
-}
-.block-open {
- 
 }
 .block-image {
     width: 75%;   
