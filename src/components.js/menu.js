@@ -4,7 +4,7 @@ let movieSidebar = document.querySelector('.movie-sidebar');
 menu.addEventListener('click', function(event) {
     event.stopPropagation();
 
-    movieSidebar.classList.add('active-sidebar-menu');
+    movieSidebar.classList.toggle('active-sidebar-menu');
 });
 
 action.addEventListener('click', function() {
