@@ -10,6 +10,7 @@ let thriller = document.querySelector('#thriller');
 let arrow = document.querySelector('#arrow');
 let main = document.querySelector('#main');
 let image = document.querySelector('#image');
+let blockImage = document.querySelector('.block-image');
 
 
 let isHover = false;
@@ -60,6 +61,8 @@ arrow.addEventListener('click', function() {
 action.addEventListener('click', function(event) {
      event.stopPropagation();
      image.style.display = 'none';
+     blockImage.classList.add('block-open');
+      
      filterByGenres('Action');    
 });
 
@@ -84,6 +87,7 @@ thriller.addEventListener('click', function(event) {
 
 btn.addEventListener('click', function() {
      image.style.display = 'none';
+    
     let movie = search.value;
     let url = `https://api.tvmaze.com/search/shows?q=${movie}`;
     fetch(url)
