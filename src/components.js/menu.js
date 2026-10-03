@@ -7,6 +7,7 @@ menu.addEventListener('click', function(event) {
     movieSidebar.classList.toggle('active-sidebar-menu');
 });
 
+
 action.addEventListener('click', function() {
     movieSidebar.classList.remove('active-sidebar-menu');
 });

@@ -2,8 +2,7 @@ main .search {
    padding: 30px 30px;
 }
 main #movies {    
-    width: 75%; 
-    
+    width: 75%;     
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
@@ -12,9 +11,10 @@ main #movies {
     object-fit: contain;
     padding: 20px 10px;    
     margin-top: 100px;
-    @media(max-width:500px) {
+     @media(max-width:500px) {
         width: 100%;
-    }
+     }
+    
 }
 .movie {  
     width: 75%; 
@@ -34,8 +34,8 @@ main #movies {
     @media(max-width: 1050px) {
                flex: 1;
     }
-    @media(max-width:500px) {
-              width: 100%;
+    @media(max-width:500px) { 
+                 
                flex: 0 0 300px;
     }
 }
@@ -46,9 +46,7 @@ main #movies {
     object-fit: cover;
     transition: transform 500ms ease;
     border-radius: 15px;
-    @media(max-width: 650px) {
-        min-width: 250px;
-    }
+   
 }
 .movie img:hover {
     transform: scale(1.05);
@@ -95,11 +93,7 @@ main #movies {
     flex-direction: column;
     justify-content: center;    
     align-items: center;  
-    @media(max-width: 1050px) {
-      flex-direction: column;
-      align-items: center;
-     
-    }
+    
 }
 .block-film .movie-sidebar {  
     width: auto;
@@ -199,7 +193,7 @@ main #movies {
   
 }
 .block-open {
- width: 50% !important;
+ 
 }
 .block-image {
     width: 75%;   
