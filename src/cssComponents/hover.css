@@ -1,0 +1,12 @@
+header li:hover {    
+    background: linear-gradient(135deg, #929090 0%, #f5f5f5 50%, #adadad 51%, #cfcfcf 100%);
+}
+header li {
+    padding: 5px 10px;
+    border-radius: 5px;      
+}
+.menu i:hover,
+.logo span:hover {
+    color: #41403f
+}
+
