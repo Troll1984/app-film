@@ -26,6 +26,10 @@ header {
    z-index: 2000;  
    border-bottom-right-radius:5px; 
    border-bottom-left-radius:5px;  
+   @media(max-width: 500px) {
+     
+   }
+
 }
 main {       
     width: 100%;
@@ -33,8 +37,8 @@ main {
     min-height: 900px;   
 }
 .wrapper {   
-     margin: 0 auto;
-     width: 90%;
+    
+     width: 100%;
      box-sizing: border-box;
      background: url('../public/img/bg-1.jpg') no-repeat center / cover; 
      background-attachment: fixed;
