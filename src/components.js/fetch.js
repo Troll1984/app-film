@@ -14,6 +14,7 @@ let blockImage = document.querySelector('.block-image');
 let img = document.querySelector('#img');
 
 
+
 let isHover = false;
 
 btn.addEventListener('mouseenter', function() {
@@ -63,6 +64,7 @@ action.addEventListener('click', function(event) {
      event.stopPropagation();
      image.style.display = 'none';
      blockImage.classList.add('block-open');
+     img.classList.add('deactive');
       
      filterByGenres('Action');    
 });

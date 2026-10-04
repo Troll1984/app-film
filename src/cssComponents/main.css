@@ -53,8 +53,10 @@ main #movies {
     color: #fff;   
 }
 #image {  
-    width: 35%;
-    height: 750px;   
+    width: 45%;
+    height: auto; 
+    min-height: 500px; 
+    object-fit: contain; 
     z-index: 0; 
     opacity: 1;
     transition: opacity 1s ease;
@@ -102,11 +104,16 @@ main #movies {
     width: 100%;
     border-radius: 7px;   
 }
-@media(max-width: 800px){
+@media (max-width: 800px) {
     .title img {
         display: none;
     }
+
+    .title img.deactive {
+        display: block;
+    }
 }
+
 
 
     
