@@ -85,6 +85,14 @@ main #movies {
         object-fit: cover;
     }
 }
+@media (max-width: 800px) {
+    #image {
+        width: 80%;      
+        height: 300px; 
+        flex: 1 1 100%;
+        object-fit: cover;
+    }
+}
 
 .block-image {
     width: 50%;   
@@ -95,11 +103,15 @@ main #movies {
     color: #f5f1f1;      
     box-shadow: 0px -1px 16px 8px rgba(235, 229, 238, 0.75);   
 }
+.block-image h3 {
+    width: 100%;
+}
     
  @media(max-width: 800px) {
     .block-image {
         flex-direction: column; 
-        width: 100%;        
+        width: 70%;  
+        height: 70%;      
     }
  }
  @media(max-width: 600px) {
@@ -125,8 +137,37 @@ main #movies {
 
     .title img.deactive {
         display: block;
+       
+        max-width: none
+        
     }
 }
+@media(max-width: 1300px) {
+    .title img.deactive {
+        display: block;
+        width: 200%;
+        max-width: none
+        
+    }
+}
+.title h3 {
+    width: 80%;
+}
+
+@media(max-width: 600px) {
+    .title img.deactive {
+        display: block;
+        width: 250%;
+        max-width: none
+        
+    }
+    .title h3 {
+        width: 250%;
+    }
+}
+
+
+
 
 
 
