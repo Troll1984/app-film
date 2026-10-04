@@ -12,6 +12,7 @@ let main = document.querySelector('#main');
 let image = document.querySelector('#image');
 let blockImage = document.querySelector('.block-image');
 let img = document.querySelector('#img');
+let logo = document.querySelector('.logo');
 
 
 
@@ -62,6 +63,7 @@ arrow.addEventListener('click', function() {
 
 action.addEventListener('click', function(event) {
      event.stopPropagation();
+     blockImage.style.boxShadow = 'none';
      image.style.display = 'none';
      blockImage.classList.add('block-open');
      img.classList.add('deactive');
@@ -71,25 +73,37 @@ action.addEventListener('click', function(event) {
 
 comedy.addEventListener('click', function(event) {
      event.stopPropagation();
-      image.style.display = 'none';
+     blockImage.style.boxShadow = 'none';
+     image.style.display = 'none';
+     blockImage.classList.add('block-open');
+     img.classList.add('deactive');
+      
    filterByGenres('Comedy');
 });
 
 horror.addEventListener('click', function(event) {
      event.stopPropagation();
-      image.style.display = 'none';
+     blockImage.style.boxShadow = 'none';
+     image.style.display = 'none';
+     blockImage.classList.add('block-open');
+     img.classList.add('deactive');
     filterByGenres('Horror');
 });
 
 thriller.addEventListener('click', function(event) {
      event.stopPropagation();
-      image.style.display = 'none';
+     blockImage.style.boxShadow = 'none';
+     image.style.display = 'none';
+     blockImage.classList.add('block-open');
+     img.classList.add('deactive');
    filterByGenres('Thriller');
 });
 
 
 btn.addEventListener('click', function() {
-     image.style.display = 'none'; 
+     blockImage.style.boxShadow = 'none';
+     blockImage.classList.add('block-open');
+    image.style.display = 'none'; 
     let movie = search.value;
     let url = `https://api.tvmaze.com/search/shows?q=${movie}`;
     fetch(url)
@@ -110,6 +124,9 @@ btn.addEventListener('click', function() {
     });
 });
 main.addEventListener('click', function() {
+    location.reload();
+});
+logo.addEventListener('click', function() {
     location.reload();
 });
 
