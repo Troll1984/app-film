@@ -26,11 +26,11 @@ fetch('https://api.tvmaze.com/shows')
                 image.src = movies[index].image.original;
                  setTimeout(function() {
                     image.style.opacity = '1';
-                }, 50);
+                }, 30);
 
                 
 
-            }, 1000);
+            }, 700);
 
-        }, 8000);
+        }, 5000);
     });

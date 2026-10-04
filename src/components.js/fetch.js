@@ -11,6 +11,7 @@ let arrow = document.querySelector('#arrow');
 let main = document.querySelector('#main');
 let image = document.querySelector('#image');
 let blockImage = document.querySelector('.block-image');
+let img = document.querySelector('#img');
 
 
 let isHover = false;
@@ -86,8 +87,7 @@ thriller.addEventListener('click', function(event) {
 
 
 btn.addEventListener('click', function() {
-     image.style.display = 'none';
-    
+     image.style.display = 'none'; 
     let movie = search.value;
     let url = `https://api.tvmaze.com/search/shows?q=${movie}`;
     fetch(url)

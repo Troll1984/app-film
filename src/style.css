@@ -1,8 +1,9 @@
  @import "tailwindcss";
+ @import "cssComponents/header.css";
+ @import "cssComponents/burgerMenu.css";
  @import "cssComponents/animation.css";
  @import "cssComponents/main.css";
  @import "cssComponents/comments.css";
- @import "cssComponents/hover.css";
   @theme {
   --breakpoint-1200px: 1200px;
   --breakpoint-1500px: 1500px;
@@ -12,28 +13,9 @@
   --breakpoint-450px: 450px;
 }
  
-body {
-     background: #cfcfcf;     
+body {          
      width: 100%;
      height: auto;
-}
-header {
-   position: relative;
-   width: 100%;
-   height: 60px; 
-   background: hsla(0, 0%, 0%, 0.419);         
-   z-index: 2000;  
-   border-bottom-right-radius:5px; 
-   border-bottom-left-radius:5px;  
-   @media(max-width: 500px) {
-     
-   }
-
-}
-main {       
-    width: 100%;
-    height: auto;
-    min-height: 900px;   
 }
 .wrapper {     
      width: 100%;
@@ -41,23 +23,14 @@ main {
      background: url('../public/img/bg-1.jpg') no-repeat center / cover; 
      background-attachment: fixed;
 }
-header span:nth-child(2) {
-     &::before {
-                content: '';
-                display: inline-block;
-                width: 10px;
-                height: 1px;
-                background: #fff;
-                margin-bottom: 4px;
-                margin-right: 2px;
-                }
-                &::after {
-                content: '';
-                display: inline-block;
-                width: 10px;
-                height: 1px;
-                background: #fff;
-                margin-bottom: 4px;
-                margin-left: 2px;                        
-                }
+main {       
+    width: 100%;
+    height: auto;
+    min-height: 900px;   
 }
+footer {
+    width: 75%;
+    height: auto;
+    margin:0 auto;
+}
+

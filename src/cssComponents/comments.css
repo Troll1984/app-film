@@ -1,13 +1,4 @@
-footer {
-    width: 75%;
-    height: auto;
-    margin:0 auto;
-}
-
-#form-comments {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+#form-comments {    
     width: 30%;  
     margin: 15px; 
     @media(max-width: 1200px) {
@@ -17,8 +8,7 @@ footer {
         width: 60%;
     }
     @media(max-width: 600px) {
-        width: 100%;
-      
+        width: 100%;      
     }
 }
 #form-comments input {
@@ -31,9 +21,7 @@ footer {
     @media(max-width: 800px){
         width: 75%;
         height: 50px;
-    }
-   
-   
+    }  
 }
 #form-comments button {
     width: 25%;
@@ -42,8 +30,7 @@ footer {
     background: url('../public/img/bg-1.jpg') no-repeat center / cover; 
     color: #fff;
     font-weight: bolder;
-    box-shadow: 0px 0px 15px 5px rgba(230, 229, 231, 0.75);
-   
+    box-shadow: 0px 0px 15px 5px rgba(230, 229, 231, 0.75);   
 }
 .show-comments {
     width: 100%;
