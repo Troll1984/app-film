@@ -9,13 +9,9 @@ let horror = document.querySelector('#horror');
 let thriller = document.querySelector('#thriller');
 let arrow = document.querySelector('#arrow');
 let main = document.querySelector('#main');
-let image = document.querySelector('#image');
-let blockImage = document.querySelector('.block-image');
-let img = document.querySelector('#img');
 let logo = document.querySelector('.logo');
-
-
-
+let blockTitle = document.querySelector('.block-title');
+let image1 = document.querySelector('#image-1');
 let isHover = false;
 
 btn.addEventListener('mouseenter', function() {
@@ -62,48 +58,29 @@ arrow.addEventListener('click', function() {
 });
 
 action.addEventListener('click', function(event) {
-     event.stopPropagation();
-     blockImage.style.boxShadow = 'none';
-     image.style.display = 'none';
-     blockImage.classList.add('block-open');
-     img.classList.add('deactive');
-      
+     event.stopPropagation();    
+    image1.style.display = 'none';
+           
      filterByGenres('Action');    
 });
-
 comedy.addEventListener('click', function(event) {
-     event.stopPropagation();
-     blockImage.style.boxShadow = 'none';
-     image.style.display = 'none';
-     blockImage.classList.add('block-open');
-     img.classList.add('deactive');
-      
+     event.stopPropagation();    
+   image1.style.display = 'none';     
    filterByGenres('Comedy');
 });
-
 horror.addEventListener('click', function(event) {
-     event.stopPropagation();
-     blockImage.style.boxShadow = 'none';
-     image.style.display = 'none';
-     blockImage.classList.add('block-open');
-     img.classList.add('deactive');
+     event.stopPropagation();   
+     image1.style.display = 'none';    
     filterByGenres('Horror');
 });
-
 thriller.addEventListener('click', function(event) {
-     event.stopPropagation();
-     blockImage.style.boxShadow = 'none';
-     image.style.display = 'none';
-     blockImage.classList.add('block-open');
-     img.classList.add('deactive');
+     event.stopPropagation();   
+    image1.style.display = 'none';   
    filterByGenres('Thriller');
 });
 
-
-btn.addEventListener('click', function() {
-     blockImage.style.boxShadow = 'none';
-     blockImage.classList.add('block-open');
-    image.style.display = 'none'; 
+btn.addEventListener('click', function() {   
+    image1.style.display = 'none';    
     let movie = search.value;
     let url = `https://api.tvmaze.com/search/shows?q=${movie}`;
     fetch(url)
@@ -115,7 +92,7 @@ btn.addEventListener('click', function() {
         if (item.show.image) {
             movies.innerHTML += 
             `<div class="movie">
-                <h3>${item.show.name}</h3>
+                <h3>${item.show.name} </h3>
                 <p>${item.show.genres}</p>
                 <img src="${item.show.image.medium}">
             </div>`;

@@ -16,21 +16,20 @@
 body {          
      width: 100%;
      height: auto;
+     background: url('../public/img/bg-1.jpg') no-repeat center / cover;
 }
 .wrapper {     
      width: 100%;
-     box-sizing: border-box;
-     background: url('../public/img/bg-1.jpg') no-repeat center / cover; 
+     box-sizing: border-box;      
      background-attachment: fixed;
 }
 main {       
     width: 100%;
-    height: auto;
-    min-height: 900px;   
+    height: auto;      
 }
 footer {
-    width: 75%;
+    width:100%;
     height: auto;
-    margin:0 auto;
+   
 }
 

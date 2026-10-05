@@ -41,14 +41,23 @@ header span:nth-child(2) {
     padding: 7px 15px;    
 }
 @media(max-width: 600px) {
+        .search {
+        position: relative;
+    }    
        .search input {
-            display: none;   
+            position: absolute;
+            top: 5px;
+            right: 180px;
+            
+            width: 0;
+            opacity: 0;   
+            overflow: hidden;
+            transition: all 500ms ease;
         }
         .search input.inp {
-           position: fixed;
-           top: 60px;
-           left: 80px;
-           display: block;   
+           width: 180px;
+           padding: 7px 15px;
+           opacity: 1;   
         }
 }
 
