@@ -3,7 +3,7 @@ const slider = document.querySelector('.wrap-slide');
 
 const originalSlides = 3;
 const transitionTime = 500;
-const intervalTime = 1000;
+const intervalTime = 3000;
 
 // Берём первые три оригинальные картинки
 const originals = Array.from(image1.children).slice(0, originalSlides);

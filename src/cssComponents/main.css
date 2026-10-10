@@ -93,7 +93,7 @@ span {
     height: auto;
     object-fit: contain;
     border-radius: 16px;
-    filter: brightness(0.35);
+    filter: brightness(0.75);
     @media(max-width: 600px){
         width: min(600px, 80vw);
     }
