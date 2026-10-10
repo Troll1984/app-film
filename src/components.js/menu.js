@@ -2,10 +2,15 @@ let menu = document.querySelector('.menu');
 let movieSidebar = document.querySelector('.movie-sidebar');
 let search = document.querySelector('#search');
 let lupa = document.querySelector('#lupa');
+let close = document.querySelector('.close');
 
 menu.addEventListener('click', function(event) {
     event.stopPropagation();
-    movieSidebar.classList.toggle('active-sidebar-menu');
+    movieSidebar.classList.add('active-sidebar-menu');
+});
+close.addEventListener('click', function(event) {
+    event.stopPropagation();
+    movieSidebar.classList.remove('active-sidebar-menu');
 });
 
 
