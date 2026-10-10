@@ -5,6 +5,7 @@
  @import "cssComponents/main.css";
  @import "cssComponents/comments.css";
   @theme {
+ 
   --breakpoint-1200px: 1200px;
   --breakpoint-1500px: 1500px;
   --breakpoint-800px: 800px;

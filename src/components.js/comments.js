@@ -33,7 +33,7 @@ function showCommetar() {
                 <p>${comment.comment}</p>
             </div>
            
-            <button data-index="${index}">del</button>
+            <button data-index="${index}">✖</button>
         </div>`
         
     }

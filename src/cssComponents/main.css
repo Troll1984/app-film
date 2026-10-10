@@ -1,20 +1,25 @@
 main #movies {    
-    width: 90%;         
-    padding: 20px 10px;          
+    width: 90%; 
+    height: auto;        
+    padding: 20px 10px;    
+    scrollbar-width: none;      
     @media(max-width:500px) {
         width: 100%;
         padding: 5px 5px;
     }    
 }
 .movie {  
-    width: 75%;     
+    width: 75%;   
+    background: hsla(0, 0%, 0%, 0.419);  
     display: flex;
-    flex-direction: column;   
+    flex-direction: column;         
     gap: 10px;
+    padding: 10px;
     flex: 0 0 300px;
     color: #fff;   
     box-sizing: border-box;   
     cursor: pointer;   
+    margin-top: 10px;
 } 
     @media(max-width: 1200px) {
     .movie {  
@@ -26,12 +31,11 @@ main #movies {
     }
 }
      @media(max-width: 600px) {
-    .movie {  
-    width: 100%;
-    display: flex;
-    flex-direction: column;   
-    gap: 10px;
-    flex: 0 0 300px;   
+    .movie {    
+    height: 300px ;     
+    gap: 5px;
+    flex: 0 0 100px; 
+    object-fit: cover;  
     }
     
 
@@ -39,10 +43,10 @@ main #movies {
 .movie img {
     width: 300px;
     min-width: 150px;
-    height:500px;
-    object-fit: cover;
+    height:300px;
+    object-fit: contain;
     transition: transform 500ms ease;
-    border-radius: 15px;   
+    border-radius: 15px;       
 }
 .movie img:hover {
     transform: scale(1.05);
@@ -52,18 +56,69 @@ main #movies {
     font-size: 18px;
     font-weight: bold;
     min-height: 30px;
+    text-align: center;
 }
-.movie h3 {
-        font-size: 20px;
-        min-height: 30px;
+
+span {
+    text-align:center;
+}
+.wrap-slide {
+    position: relative;
+    width: 100%;
+    max-width: 1850px;
+    margin-inline: auto;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+#image-1 {
+    display: flex;
+    width: max-content;
+    gap: 12px;
+    padding: 8px;
+    transition: transform 0.5s ease;
+}
+
+.slide-img {
+    flex-shrink: 0;
+    width: min(600px, 80vw);
+    height: auto;
+    object-fit: contain;
+    border-radius: 16px;
+    filter: brightness(0.35);
+    @media(max-width: 600px){
+        width: min(600px, 87vw);
     }
-.movie p {
-     min-height: 30px;
 }
 
 
 
+.overdisplayL,
+.overdisplayR {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 20%;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 2;
+    pointer-events: none;
+    @media(max-width: 1050px){
+        width: 8%;
+    }
+    @media(max-width: 600px){
+        width: 0%;
+    }
+}
 
+.overdisplayL {
+    left: 0;
+    border-radius: 10px 0 0 10px;
+}
+
+.overdisplayR {
+    right: 0;
+    border-radius: 0 10px 10px 0;
+}
 
 
 

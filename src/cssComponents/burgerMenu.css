@@ -5,11 +5,12 @@
    right: 0;   
    height: 100vh;
    width: 25%;
-   background: hsla(0, 0%, 0%, 0.419);  
+   background: hsla(0, 0%, 0%, 0.819);  
    transform:  translateX(100%);   
    border-bottom-right-radius: 15px; 
    border-bottom-left-radius: 15px;
    padding-top: 70px;
+   z-index: 5000;
    @media(max-width: 1400px) {
     width: 40%;
    }
@@ -52,6 +53,7 @@
     opacity: 1;
     max-height: 300px;     
 }
+
 #arrow.active {
     transform: rotate(90deg);
 }

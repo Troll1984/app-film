@@ -18,7 +18,7 @@
                 <li>ТЕЛЕКАНАЛИ</li>
                 <li>ФІЛЬМИ</li>
                 <li>МУЛЬТФІЛЬМИ</li>
-                <li>СЕРІАЛИ</li>
+                <li class="serial1">СЕРІАЛИ</li>
                 <li>ШОУ</li>
               </ul>
               <div class="search flex items-center gap-1 justify-center   ">
@@ -33,7 +33,7 @@
                         <h2 class="text-center font-bold text-3xl">Filter</h2>
                         <ul class="flex-col text-2xl">
                             <li id="main">Главная</li>  
-                            <li id="serial">Серіали<i id="arrow" class="fa-solid fa-chevron-right"></i> 
+                            <li class="serial">Серіали<i id="arrow" class="fa-solid fa-chevron-right"></i> 
                               <ul id="list-open" class="overflow-hidden opacity-0 ">
                                   <li id="action">Action</li>
                                   <li id="comedy">Comedy</li>
@@ -43,20 +43,31 @@
                             </li>                     
                         </ul>
                     </div>                      
-          <main>                       
+          <main class="w-full">                       
                 <div class="block-film  gap-1 flex flex-col justify-center items-center p-5 w-100%">   
-                  <h1 class="text-white text-2xl 550px:text-5xl font-bold  text-center w-80 550px:w-150  mb-10 mt-10">Фільми та серіали від Action-Films </h1>
-                  <div class=" w-full flex flex-col items-center " id="image-1">
-                    
-                     <img  class=" w-200 h-auto object-contain rounded-2xl" src="./public/img/image-4.jpg" alt="" > 
-                  </div>                                  
+                  <h1 class="text-white text-2xl 550px:text-4xl font-bold  text-center w-80 550px:w-150  mb-3 ">Фільми та серіали від Action-Films </h1>
+                
+                  <div class="flex wrap-slide w-[1850px]   object-contain overflow-hidden bg-white  rounded-xl ">
+                      <div class="overdisplayL"></div>
+                      <div class="overdisplayR"></div>
+                         <div class="  flex  w-[1800px]  gap-3 p-2 object-contain " id="image-1">                    
+                            <img id="image-x" class="slide-img shrink-0 w-[600px] h-auto  object-contain rounded-2xl  " src="./public/img/image-4.jpg" alt="" > 
+                            <img id="image-y" class="slide-img shrink-0 w-[600px] h-auto object-contain rounded-2xl " src="./public/img/image-4.jpg" alt="" > 
+                            <img id="image-z" class="slide-img shrink-0 w-[600px] h-auto object-contain rounded-2xl" src="./public/img/image-4.jpg" alt="" > 
+                            <img id="image-a" class="slide-img shrink-0 w-[600px] h-auto  object-contain rounded-2xl " src="./public/img/image-4.jpg" alt="" > 
+                            <img id="image-b" class="slide-img shrink-0 w-[600px] h-auto object-contain rounded-2xl" src="./public/img/image-4.jpg" alt="" > 
+                            <img id="image-c" class="slide-img shrink-0 w-[600px] h-auto object-contain rounded-2xl" src="./public/img/image-4.jpg" alt="" > 
+                             
+                        </div> 
+                  </div>
+                                                  
                                                                          
                       <div id="movies" class="flex justify-center items-center flex-nowrap gap-10  object-contain overflow-y-hidden w-[90] mx-auto">                         
                       </div>
                 </div>
           </main>
           <footer>
-                <form id="form-comments" class=" flex flex-col gap-3">
+                <form id="form-comments" class=" flex flex-col gap-3 p-2">
                   <h3 class="text-2xl font-bold">Comments(<span id="counter">0</span>)</h3>
                   <input type="text" name="user.name" placeholder="Enter your name">
                   <input type="text" name="comment" placeholder="Write comment... ">

@@ -1,7 +1,7 @@
 let search = document.querySelector('#search');
 let btn = document.querySelector('#btn');
 let movies = document.querySelector('#movies');
-let serial = document.querySelector('#serial');
+let serial = document.querySelector('.serial');
 let listOpen = document.querySelector('#list-open');
 let action = document.querySelector('#action');
 let comedy = document.querySelector('#comedy');
@@ -42,8 +42,7 @@ function filterByGenres(genre) {
         if (item.image && item.genres.includes(genre)) {
             movies.innerHTML += 
             `<div class="movie">
-                <h3>${item.name}</h3>
-                 <p>${item.genres}</p>                 
+                <h3>${item.name}</h3>                                 
                 <img src="${item.image.medium}">
                 <span>Рейтинг: ${item.rating.average}</span>
             </div>`;
@@ -52,30 +51,30 @@ function filterByGenres(genre) {
     });
 }
 
-arrow.addEventListener('click', function() {
+serial.addEventListener('click', function() {
     listOpen.classList.toggle('active');
     arrow.classList.toggle('active');
 });
 
 action.addEventListener('click', function(event) {
      event.stopPropagation();    
-    image1.style.display = 'none';
+   
            
      filterByGenres('Action');    
 });
 comedy.addEventListener('click', function(event) {
      event.stopPropagation();    
-   image1.style.display = 'none';     
+    
    filterByGenres('Comedy');
 });
 horror.addEventListener('click', function(event) {
      event.stopPropagation();   
-     image1.style.display = 'none';    
+      
     filterByGenres('Horror');
 });
 thriller.addEventListener('click', function(event) {
      event.stopPropagation();   
-    image1.style.display = 'none';   
+   
    filterByGenres('Thriller');
 });
 
@@ -87,13 +86,11 @@ btn.addEventListener('click', function() {
     .then(response => response.json())
     .then(data => {     
         movies.innerHTML = '';
-      for(let item of data){
-          console.log(item.show.genres);
+      for(let item of data){          
         if (item.show.image) {
             movies.innerHTML += 
             `<div class="movie">
-                <h3>${item.show.name} </h3>
-                <p>${item.show.genres}</p>
+                <h3>${item.show.name} </h3>                
                 <img src="${item.show.image.medium}">
             </div>`;
             }
@@ -106,5 +103,6 @@ main.addEventListener('click', function() {
 logo.addEventListener('click', function() {
     location.reload();
 });
+filterByGenres('Action');
 
 
