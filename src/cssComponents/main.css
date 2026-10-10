@@ -1,7 +1,7 @@
 main #movies {    
     width: 90%; 
     height: auto;        
-    padding: 20px 10px;    
+    padding: 10px 5px;    
     scrollbar-width: none;      
     @media(max-width:500px) {
         width: 100%;
@@ -10,6 +10,7 @@ main #movies {
 }
 .movie {  
     width: 75%;   
+    height: 400px;
     background: hsla(0, 0%, 0%, 0.419);  
     display: flex;
     flex-direction: column;         
@@ -20,6 +21,7 @@ main #movies {
     box-sizing: border-box;   
     cursor: pointer;   
     margin-top: 10px;
+    border-radius: 10px;
 } 
     @media(max-width: 1200px) {
     .movie {  
@@ -31,7 +33,8 @@ main #movies {
     }
 }
      @media(max-width: 600px) {
-    .movie {    
+    .movie {   
+        width: 65%; 
     height: 300px ;     
     gap: 5px;
     flex: 0 0 100px; 
@@ -46,7 +49,7 @@ main #movies {
     height:300px;
     object-fit: contain;
     transition: transform 500ms ease;
-    border-radius: 15px;       
+    border-radius: 10px;       
 }
 .movie img:hover {
     transform: scale(1.05);
@@ -55,8 +58,13 @@ main #movies {
     width: 100%;
     font-size: 18px;
     font-weight: bold;
-    min-height: 30px;
+    min-height: 35px;
     text-align: center;
+     @media(max-width: 600px) {
+        font-size: 14px;
+     }
+
+     
 }
 
 span {
@@ -87,7 +95,7 @@ span {
     border-radius: 16px;
     filter: brightness(0.35);
     @media(max-width: 600px){
-        width: min(600px, 87vw);
+        width: min(600px, 80vw);
     }
 }
 
@@ -127,5 +135,3 @@ span {
 
 
     
-
-

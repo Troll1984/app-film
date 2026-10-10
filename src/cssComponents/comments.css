@@ -31,7 +31,12 @@
     background: url('../public/img/bg-1.jpg') no-repeat center / cover; 
     color: #fff;
     font-weight: bolder;
-    box-shadow: 0px 0px 15px 5px rgba(230, 229, 231, 0.75);   
+    box-shadow: 0px 0px 15px 5px rgba(230, 229, 231, 0.75);  
+    transition: all 500ms ease; 
+    cursor: pointer;
+}
+#form-comments button:hover {
+     transform: translateY(-5px);
 }
 .show-comments {
     width: 100%;
