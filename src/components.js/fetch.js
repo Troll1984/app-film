@@ -58,23 +58,23 @@ serial.addEventListener('click', function() {
 
 action.addEventListener('click', function(event) {
      event.stopPropagation();    
-   
+    listOpen.classList.remove('active');
            
      filterByGenres('Action');    
 });
 comedy.addEventListener('click', function(event) {
      event.stopPropagation();    
-    
+    listOpen.classList.remove('active');
    filterByGenres('Comedy');
 });
 horror.addEventListener('click', function(event) {
      event.stopPropagation();   
-      
+      listOpen.classList.remove('active');
     filterByGenres('Horror');
 });
 thriller.addEventListener('click', function(event) {
      event.stopPropagation();   
-   
+   listOpen.classList.remove('active');
    filterByGenres('Thriller');
 });
 

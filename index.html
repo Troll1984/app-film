@@ -16,9 +16,30 @@
               </div>
               <ul class="hidden 1050px:flex  justify-between text-md  min-w-0  w-120 1500px:w-200 text-white ">
                 <li>ТЕЛЕКАНАЛИ</li>
-                <li>ФІЛЬМИ</li>
-                <li>МУЛЬТФІЛЬМИ</li>
-                <li class="serial1">СЕРІАЛИ</li>
+                <li class="serial-2">ФІЛЬМИ
+                  <ul id="list-open-2" class="overflow-hidden opacity-0 ">
+                      <li id="action-2"><span>Action</span></li>
+                      <li id="comedy-2"><span>Comedy</span></li>
+                      <li id="horror-2"><span>Horror</span></li>
+                      <li id="thriller-2"><span>Thriller</span></li>
+                  </ul>
+                </li>
+                <li class="serial-3" >МУЛЬТФІЛЬМИ
+                  <ul id="list-open-3" class="overflow-hidden opacity-0  ">
+                      <li id="action-3"><span>Action</span></li>
+                      <li id="comedy-3"><span>Comedy</span></li>
+                      <li id="horror-3"><span>Horror</span></li>
+                      <li id="thriller-3"><span>Thriller</span></li>
+                  </ul>
+                </li>
+                <li class="serial-1">СЕРІАЛИ
+                   <ul id="list-open-1" class="overflow-hidden opacity-0 ">
+                      <li id="action-1"><span>Action</span></li>
+                      <li id="comedy-1"><span>Comedy</span></li>
+                      <li id="horror-1"><span>Horror</span></li>
+                      <li id="thriller-1"><span>Thriller</span></li>
+                   </ul>
+                </li>
                 <li>ШОУ</li>
               </ul>
               <div class="search flex items-center gap-1 justify-center   ">
@@ -67,6 +88,7 @@
                 </div>
           </main>
           <footer>
+            
                 <form id="form-comments" class=" flex flex-col gap-3 p-2">
                   <h3 class="text-2xl font-bold">Comments(<span id="counter">0</span>)</h3>
                   <input type="text" name="user.name" placeholder="Enter your name">

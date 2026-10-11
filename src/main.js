@@ -3,3 +3,4 @@ import './components.js/fetch';
 import './components.js/comments';
 import './components.js/menu';
 import './components.js/sliderImage';
+import './components.js/header';

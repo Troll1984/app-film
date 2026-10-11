@@ -32,13 +32,11 @@
     margin-left: 50px; 
 }
 .movie-sidebar ul li {    
-    padding: 15px 15px;
+    padding: 10px 15px;
+    border-radius: 8px;
     cursor: pointer;    
 }
-.movie-sidebar ul li:hover {
-     background:  hsla(0, 0%, 0%, 0.567);
-     border-radius: 10px;
-}
+
 #list-open {
     position: absolute;
     z-index: 100;   
@@ -47,6 +45,9 @@
      @media(max-width: 500px){
         left: 0px;
     }   
+}
+#list-open li:hover {
+   background:#202020;;
 }
 #list-open.active {
     width: 70%;
@@ -69,5 +70,6 @@
     position: fixed;
     top: 10px;
     right: 20px;
-    
+    font-size: 20px;
+    cursor: pointer;
 }

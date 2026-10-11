@@ -77,16 +77,51 @@ header span:nth-child(2) {
     color: #e9e6e3;
 }
 .search input:focus {
-    box-shadow: 0px -1px 25px 8px rgba(127, 37, 155, 0.75);    
+    box-shadow: 0px -1px 25px 8px rgba(221, 220, 221, 0.75);    
 }
-header li:hover {    
-    background: hsla(0, 0%, 0%, 0.819);
-}
+
 header li {
     padding: 7px 15px;
     border-radius: 7px;      
+}
+header li:hover {
+    background: hsla(0, 0%, 0%, 0.952);
 }
 
 .logo span:hover {
     color: #e9e6e3
 }
+#list-open-1,
+#list-open-2,
+#list-open-3 {   
+    position: absolute;
+    top: 38px;
+    left: 0;
+    max-height: 0;
+    width: 120px;
+    height: auto;
+    border-radius: 5px;
+    transition: all 500ms ease;   
+    background: hsla(0, 0%, 4%, 0.952);
+    transition: all 500ms ease;
+}
+#list-open-1 li:hover,
+#list-open-2 li:hover,
+#list-open-3 li:hover {
+    background: #202020;
+}
+.serial-1,
+.serial-2,
+.serial-3 {
+    position: relative;    
+}
+
+#list-open-1.active-1,
+#list-open-2.active-1,
+#list-open-3.active-1{
+    opacity: 1;       
+    max-height: 300px; 
+} 
+
+
+
