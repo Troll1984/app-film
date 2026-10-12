@@ -74,10 +74,13 @@ span {
 .wrap-slide {
     position: relative;
     width: 100%;   
-    min-height: 400px;
+    min-height: 300px;
     max-width: 1850px;   
     overflow: hidden;
-    box-sizing: border-box;     
+    box-sizing: border-box;  
+     @media(max-width: 600px) {
+         min-height: auto !important;
+     }   
 }
 #image-1 {
     display: flex;
@@ -93,7 +96,10 @@ span {
     border-radius: 16px;
     filter: brightness(0.75);
     @media(max-width: 600px){
-        width: min(650px, 80vw);
+        width: min(600px, 80vw);
+       object-fit: contain;
+      
+       
     }
 }
 .overdisplayL,
