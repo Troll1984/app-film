@@ -6,7 +6,7 @@ main #movies {
       
     @media(max-width:500px) {
         width: 100%;
-        padding: 5px 5px;
+        padding: 0;
     }    
 }
 .movie {  
@@ -66,41 +66,34 @@ main #movies {
     text-align: center;
      @media(max-width: 600px) {
         font-size: 14px;
-     }
-
-     
+     }     
 }
-
 span {
     text-align:center;
 }
 .wrap-slide {
     position: relative;
-    width: 100%;
-    height: auto;
-    max-width: 1850px;
-    margin-inline: auto;
+    width: 100%;   
+    min-height: 400px;
+    max-width: 1850px;   
     overflow: hidden;
-    box-sizing: border-box;
+    box-sizing: border-box;     
 }
-
 #image-1 {
     display: flex;
-    width: max-content;    
+    width: max-content;  
     gap: 12px;
     padding: 8px;
     transition: transform 0.5s ease;
 }
+   
 
 .slide-img {
-    flex-shrink: 0;
-    width: min(600px, 80vw);
-    height: auto;
-    object-fit: contain;
+    flex-shrink: 0;       
     border-radius: 16px;
     filter: brightness(0.75);
     @media(max-width: 600px){
-        width: min(600px, 80vw);
+        width: min(650px, 80vw);
     }
 }
 .overdisplayL,
