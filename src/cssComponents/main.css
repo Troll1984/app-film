@@ -2,13 +2,14 @@ main #movies {
     width: 90%; 
     height: auto;        
     padding: 10px 5px;    
-    scrollbar-width: none; 
-      
-    @media(max-width:500px) {
-        width: 100%;
-        padding: 0;
-    }    
+    scrollbar-width: none;          
 }
+ @media(max-width:500px) {
+       main #movies {    
+        width: 100%;                
+        padding: 0 ;                 
+    }
+ }
 .movie {  
     width: 100%;   
     height: 400px;
@@ -128,7 +129,41 @@ span {
     right: 0;
     border-radius: 0 10px 10px 0;
 }
-
+.arrow {
+    width: 60%;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%); 
+     @media(max-width: 800px) {
+        width: 90%;
+       
+    }   
+    @media(max-width: 600px) {
+        width: 100%;
+       
+    } 
+}
+#left,
+#right {
+    padding: 50px 50px;
+    background: hsla(0, 0%, 0%, 0.566);
+    color: #fff;
+    cursor: pointer;
+    border-radius: 8px;
+    @media(max-width: 600px) {
+        padding: 20px 20px;
+       
+    }
+}
+#left:hover,
+#right:hover {
+    background: hsla(0, 11%, 91%, 0.466);
+    color: black;
+}
+.arrow i {
+    font-size: 25px;
+}
 
 
 

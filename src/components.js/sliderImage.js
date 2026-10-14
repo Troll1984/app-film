@@ -1,5 +1,7 @@
 const image1 = document.querySelector('#image-1');
 const slider = document.querySelector('.wrap-slide');
+const left = document.querySelector('#left');
+const right = document.querySelector('#right');
 
 const originalSlides = 3;
 const transitionTime = 500;
@@ -24,6 +26,7 @@ const slides = Array.from(image1.children);
 // Начинаем с первой оригинальной картинки
 let index = originalSlides;
 let timer;
+let isAnimating = false;
 
 function updateSlider(animate = true) {
     const slide = slides[index];
@@ -40,22 +43,47 @@ function updateSlider(animate = true) {
 }
 
 function nextSlide() {
+      if (isAnimating) return;
+
+    isAnimating = true;
     index++;
 
     updateSlider(true);
 
-    // Дошли до первой копии после оригиналов
-    if (index === originalSlides * 2) {
-        setTimeout(() => {
-            index = originalSlides;
-            updateSlider(false);
-        }, transitionTime);
+  setTimeout(() => {
+    if (index === originalSlides * 2) { 
+        index = originalSlides; 
+        updateSlider(false);
     }
+    isAnimating = false;
+  }, transitionTime)
 }
 
-updateSlider(false);
+ function rightSlide() {
+        if (isAnimating) return; 
+        isAnimating = true;
+    index--;
 
+    updateSlider(true);
+
+    setTimeout(() => {
+        if (index === originalSlides - 1) {
+             index = originalSlides * 2 - 1;
+             updateSlider(false);
+             }
+             isAnimating = false;
+    },transitionTime);
+   
+}
 timer = setInterval(nextSlide, intervalTime);
+
+left.addEventListener('click', () => {
+    nextSlide();
+});
+right.addEventListener('click', () => {   
+    rightSlide()
+});
+updateSlider(false);
 
 window.addEventListener('resize', () => {
     updateSlider(false);
