@@ -4,6 +4,7 @@
  @import "cssComponents/animation.css";
  @import "cssComponents/main.css";
  @import "cssComponents/comments.css";
+ @import "cssComponents/footer.css";
   @theme {
  
   --breakpoint-1200px: 1200px;
@@ -29,8 +30,9 @@ main {
     height: auto;      
 }
 footer {
-    width:100%;
+    width:85%;
     height: auto;
+    margin: 50px auto;
    
 }
 

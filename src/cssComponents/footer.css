@@ -1,0 +1,38 @@
+.social i {
+    font-size: 25px;
+    
+   
+}
+.block-icon i {
+    font-size: 50px;
+    cursor: pointer;
+     transition: transform 500ms ease;
+   
+}
+.tel i {
+    font-size: 30px;
+    cursor: pointer;       
+}
+.tel span {
+    cursor: pointer; 
+}
+.tel i:hover,
+.tel span:hover {
+    color: #d3cbcb;
+}
+.contact a {
+    color: rgb(230, 230, 236);
+}
+.contact a:hover {
+    color: rgb(190, 190, 196);
+}
+.icon {
+    transition: transform 500ms ease;
+}
+.icon:hover {
+    transform: translateY(-10px);
+}
+
+.block-icon i:hover {
+    transform: scale(1.2);
+}

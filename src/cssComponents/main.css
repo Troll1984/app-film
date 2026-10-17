@@ -130,24 +130,32 @@ span {
     border-radius: 0 10px 10px 0;
 }
 .arrow {
-    width: 60%;
+    width: 80%;
     position: absolute;
-    top: 25%;
+    top: 27%;
     left: 50%;
     transform: translateX(-50%); 
-     @media(max-width: 800px) {
+    z-index: 3000;
+    @media(max-width: 1400px) {
+        width: 80%;
+    }
+    @media(max-width: 1100px) {
         width: 90%;
-       
+    }
+    @media(max-width: 800px) {
+        width: 110%;
+             
     }   
     @media(max-width: 600px) {
-        width: 100%;
+       display: none;
+        
+       
        
     } 
 }
 #left,
 #right {
-    padding: 50px 50px;
-    background: hsla(0, 0%, 0%, 0.566);
+    padding: 30px 30px;   
     color: #fff;
     cursor: pointer;
     border-radius: 8px;
@@ -158,12 +166,14 @@ span {
 }
 #left:hover,
 #right:hover {
-    background: hsla(0, 11%, 91%, 0.466);
-    color: black;
+    background: hsla(0, 4%, 73%, 0.466);
+    color: #000;
 }
 .arrow i {
-    font-size: 25px;
+    font-size: 20px;
 }
+
+
 
 
 

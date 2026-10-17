@@ -1,36 +1,37 @@
-let serialFilms = document.querySelector('.serial-2');
-let listOpenFilms = document.querySelector('#list-open-2');
-let serialMult = document.querySelector('.serial-3');
-let listOpenMult = document.querySelector('#list-open-3');
-let serialSerial = document.querySelector('.serial-1');
-let listOpenSerial = document.querySelector('#list-open-1');
-let actionFilms = document.querySelector('#action-2');
-let comedyFilms = document.querySelector('#comedy-2');
-let horrorFilms = document.querySelector('#horror-2');
-let thrillerFilms = document.querySelector('#thriller-2');
+import { getElement, movies } from './dom';
+const serialFilms = getElement('.serial-2');
+const listOpenFilms = getElement('#list-open-2');
+const serialMult = getElement('.serial-3');
+const listOpenMult = getElement('#list-open-3');
+const serialSerial = getElement('.serial-1');
+const listOpenSerial = getElement('#list-open-1');
+const actionFilms = getElement('#action-2');
+const comedyFilms = getElement('#comedy-2');
+const horrorFilms = getElement('#horror-2');
+const thrillerFilms = getElement('#thriller-2');
 
 
-serialFilms.addEventListener('mouseenter', function() {
+serialFilms.addEventListener('mouseenter', function(): void {
     listOpenFilms.classList.add('active-1');
 })
-serialFilms.addEventListener('mouseleave', function() {
+serialFilms.addEventListener('mouseleave', function(): void {
     listOpenFilms.classList.remove('active-1');
 })
-serialMult.addEventListener('mouseenter', function() {
+serialMult.addEventListener('mouseenter', function(): void {
     listOpenMult.classList.add('active-1');
 })
-serialMult.addEventListener('mouseleave', function() {
+serialMult.addEventListener('mouseleave', function(): void {
     listOpenMult.classList.remove('active-1');
 })
-serialSerial.addEventListener('mouseenter', function() {
+serialSerial.addEventListener('mouseenter', function(): void {
     listOpenSerial.classList.add('active-1');
 })
-serialSerial.addEventListener('mouseleave', function() {
+serialSerial.addEventListener('mouseleave', function(): void {
     listOpenSerial.classList.remove('active-1');
 })
 
 
-function filterByGenres(genre) {
+function filterByGenres(genre: string): void {
      let url = `https://api.tvmaze.com/shows`;
     fetch(url)
     .then(response => response.json())
@@ -49,23 +50,23 @@ function filterByGenres(genre) {
     });
 }
 
-actionFilms.addEventListener('click', function(event) {
+actionFilms.addEventListener('click', function(event: MouseEvent): void {
      event.stopPropagation();    
     listOpenFilms.classList.remove('active');
            
      filterByGenres('Action');    
 });
-comedyFilms.addEventListener('click', function(event) {
+comedyFilms.addEventListener('click', function(event: MouseEvent): void {
      event.stopPropagation();    
     listOpenFilms.classList.remove('active');
    filterByGenres('Comedy');
 });
-horrorFilms.addEventListener('click', function(event) {
+horrorFilms.addEventListener('click', function(event: MouseEvent): void {
      event.stopPropagation();   
       listOpenFilms.classList.remove('active');
     filterByGenres('Horror');
 });
-thrillerFilms.addEventListener('click', function(event) {
+thrillerFilms.addEventListener('click', function(event: MouseEvent ): void {
      event.stopPropagation();   
    listOpenFilms.classList.remove('active');
    filterByGenres('Thriller');

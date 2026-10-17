@@ -66,8 +66,7 @@
                         <div class="close text-white"><i class="fa-solid fa-xmark"></i></div>
                     </div>                      
           <main class="w-full">                       
-                <div class="block-film  gap-1 flex flex-col justify-center items-center p-8 550px:p-3 w-100%">   
-                  <h1 class="text-white text-2xl 550px:text-4xl font-bold  text-center w-80 550px:w-200  mb-3 ">Фільми та серіали від Action-Films </h1>
+                <div class="block-film  gap-1 flex flex-col justify-center items-center p-8 550px:p-3 w-100%">                   
                 
                   <div class="flex wrap-slide  overflow-hidden bg-white  rounded-xl ">
                       <div class="overdisplayL"></div>
@@ -81,8 +80,8 @@
                             <img id="image-c" class="slide-img shrink-0 w-[600px]  object-cover rounded-2xl" src="./public/img/image-4.jpg" alt="" >                              
                         </div> 
                         <div class="arrow flex justify-between p-10">
-                          <button id="left"><i class="fa-solid fa-arrow-left"></i></button>
-                        <button id="right"><i class="fa-solid fa-arrow-right"></i></button>
+                          <button id="left"><i class="fa-solid fa-angle-left"></i></i></button>
+                        <button id="right"><i class="fa-solid fa-angle-right"></i></button>
                         </div>
                         
                   </div>                    
@@ -91,22 +90,89 @@
                       </div>
                 </div>
           </main>
-          <footer>
-            
-                <form id="form-comments" class=" flex flex-col gap-3 p-2">
-                  <h3 class="text-2xl font-bold">Comments(<span id="counter">0</span>)</h3>
-                  <input type="text" name="user.name" placeholder="Enter your name">
-                  <input type="text" name="comment" placeholder="Write comment... ">
-                  <button type="submit">Send</button>
+          <footer class="text-white justify-center flex 1200px:justify-between flex-wrap ">
+              <div class="flex flex-col gap-3">
+                    <div class="contact  flex flex-col gap-2 items-center 1200px:">
+                        <h4 class="text-2xl font-bold">Служба підтримки</h4>
+                        <p class="text-md font-bold">Ми завжди готові допомогти</p>
+                        <a title="servic" href="ortmanaleksej3@gmail.com">ortmanaleksej3@gmail.com</a>
+                    </div>
+                    <div class="flex justify-between w-[350px] 800px:w-[400px] mt-5">
+                        <div class="flex flex-col gap-5">
+                            <div class="tel flex justify-between w-[170px]">
+                                <i class="fa-brands fa-viber"></i>
+                                <span class="text-md font-bold text-gray-200">+380955829426</span>
+                            </div>
+                            <div class="tel flex justify-between w-[170px]">
+                                <i class="fa-brands fa-whatsapp"></i>
+                                <span class="text-md font-bold text-gray-200">+380955829426</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-5">
+                            <div class="tel flex justify-between w-[170px]">
+                                <i class="fa-brands fa-telegram"></i>
+                                <span class="text-md font-bold text-white">+380955829426</span>
+                            </div>
+                            <div class="tel flex justify-between w-[170px]">
+                                <i class="fa-solid fa-phone"></i>
+                                <span class="text-md font-bold text-gray-200">+380955829426</span>
+                            </div>
+                        </div>
+                    </div> 
+              </div>      
+              <div class="social flex flex-col gap-[70px] mt-5 1200px:">
+                  <div class="block-apps flex-wrap 800px:flex gap-3 mx-auto 800px:">
+                        <div class="icon flex justify-around 800px:justify-between items-center w-[200px] 800px:w-[140px] h-[50px] bg-black text-white p-3 rounded-md cursor-pointer mb-3 800px:">
+                              <i class="fa-brands fa-google-play"></i>
+                              <div class="info  flex flex-col leading-none">
+                                  <span class="text-xs">Завантажте в </span>
+                                  <span class="text-md">Google Play</span>
+                              </div>
+                        </div>
+                        <div class="icon flex justify-around 800px:justify-between items-center w-[200px] 800px:w-[140px] h-[50px] bg-black text-white p-3 rounded-md cursor-pointer mb-3 800px:">
+                              <i class="fa-brands fa-apple"></i>
+                              <div class="info  flex flex-col leading-none">
+                                  <span class="text-xs">Доступно в </span>
+                                  <span class="text-md">App Store</span>
+                              </div>
+                        </div>
+                        <div class="icon flex justify-around 800px:justify-between items-center w-[200px] 800px:w-[140px] h-[50px] bg-black text-white p-3 rounded-md cursor-pointer mb-3 800px:">
+                                <i class="fa-solid fa-tv"></i>
+                              <div class="info  flex flex-col leading-none">
+                                <span class="text-xs">Доступно для </span>
+                                <span class="text-md">SMART TV</span>
+                              </div>
+                        </div>
+                        <div class="icon flex justify-around 800px:justify-between items-center w-[200px] 800px:w-[140px] h-[50px] bg-black text-white p-3 rounded-md cursor-pointer mb-3 800px:">
+                              <i class="fa-solid fa-store"></i>
+                              <div class="info  flex flex-col leading-none">
+                                  <span class="text-xs">Доступно в</span>
+                                  <span class="text-md">Google Play</span>
+                              </div>
+                        </div>
+                  </div>
+                  <div class="block-icon flex justify-around">
+                      <i class="fa-brands fa-facebook"></i>
+                      <i class="fa-brands fa-youtube"></i>
+                      <i class="fa-brands fa-telegram"></i>
+                      <i class="fa-brands fa-square-instagram"></i>
+                      <i class="fa-brands fa-linkedin-in"></i>
+                  </div>
+              </div>         
+          </footer>
+                <form id="form-comments" class=" flex flex-col gap-3 p-10">
+                    <h3 class="text-2xl font-bold">Comments(<span id="counter">0</span>)</h3>
+                    <input type="text" name="user.name" placeholder="Enter your name">
+                    <input type="text" name="comment" placeholder="Write comment... ">
+                    <button type="submit">Send</button>
                 </form>
                 <div class="show-comments">           
                 </div>
-          </footer>
-
       </div> 
           
 
       
-    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/main.ts"></script>
+    
   </body>
 </html>

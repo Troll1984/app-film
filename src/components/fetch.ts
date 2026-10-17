@@ -1,23 +1,27 @@
-let search = document.querySelector('#search');
-let btn = document.querySelector('#btn');
-let movies = document.querySelector('#movies');
-let serial = document.querySelector('.serial');
-let listOpen = document.querySelector('#list-open');
-let action = document.querySelector('#action');
-let comedy = document.querySelector('#comedy');
-let horror = document.querySelector('#horror');
-let thriller = document.querySelector('#thriller');
-let arrow = document.querySelector('#arrow');
-let main = document.querySelector('#main');
-let logo = document.querySelector('.logo');
-let blockTitle = document.querySelector('.block-title');
-let image1 = document.querySelector('#image-1');
-let isHover = false;
+import { getElement, movies } from './dom';
+const btn = getElement('#btn');
+const serial = getElement('.serial');
+const listOpen = getElement('#list-open');
+const action = getElement('#action');
+const comedy = getElement('#comedy');
+const horror = getElement('#horror');
+const thriller = getElement('#thriller');
+const arrow = getElement('#arrow');
+const main = getElement('#main');
+const logo = getElement('.logo');
 
-btn.addEventListener('mouseenter', function() {
+
+const search = document.querySelector<HTMLInputElement>('#search');
+
+if (!search) {
+    throw new Error('Поле поиска не найдено');
+}
+let isHover: boolean = false;
+
+btn.addEventListener('mouseenter', function(): void {
     isHover = true;
 })
-btn.addEventListener('mouseleave', function() {
+btn.addEventListener('mouseleave', function(): void {
     isHover = false;
 })
 
@@ -32,7 +36,7 @@ setInterval(function() {
 }, 5000);
 
 
-function filterByGenres(genre) {
+function filterByGenres(genre: string) {
      let url = `https://api.tvmaze.com/shows`;
     fetch(url)
     .then(response => response.json())
@@ -56,31 +60,30 @@ serial.addEventListener('click', function() {
     arrow.classList.toggle('active');
 });
 
-action.addEventListener('click', function(event) {
+action.addEventListener('click', function(event: MouseEvent) {
      event.stopPropagation();    
     listOpen.classList.remove('active');
            
      filterByGenres('Action');    
 });
-comedy.addEventListener('click', function(event) {
+comedy.addEventListener('click', function(event: MouseEvent) {
      event.stopPropagation();    
     listOpen.classList.remove('active');
    filterByGenres('Comedy');
 });
-horror.addEventListener('click', function(event) {
+horror.addEventListener('click', function(event: MouseEvent) {
      event.stopPropagation();   
       listOpen.classList.remove('active');
     filterByGenres('Horror');
 });
-thriller.addEventListener('click', function(event) {
+thriller.addEventListener('click', function(event: MouseEvent) {
      event.stopPropagation();   
    listOpen.classList.remove('active');
    filterByGenres('Thriller');
 });
 
-btn.addEventListener('click', function() {   
-    image1.style.display = 'none';    
-    let movie = search.value;
+btn.addEventListener('click', function() {         
+    let movie: string = search.value;
     let url = `https://api.tvmaze.com/search/shows?q=${movie}`;
     fetch(url)
     .then(response => response.json())

@@ -1,39 +1,44 @@
-const image1 = document.querySelector('#image-1');
-const slider = document.querySelector('.wrap-slide');
-const left = document.querySelector('#left');
-const right = document.querySelector('#right');
+import { getElement } from './dom';
 
-const originalSlides = 3;
-const transitionTime = 500;
-const intervalTime = 3000;
+const image1 = getElement('#image-1');
+const slider = getElement('.wrap-slide');
+const left = getElement('#left');
+const right = getElement('#right');
+
+const originalSlides: number = 3;
+const transitionTime: number = 500;
+const intervalTime: number = 3000;
 
 // Берём первые три оригинальные картинки
-const originals = Array.from(image1.children).slice(0, originalSlides);
+const originals: HTMLElement[] = Array.from(image1.children).slice(0, originalSlides) as HTMLElement [];
 
 // Удаляем старые копии, если они есть
 image1.replaceChildren(...originals);
 
 // Создаём копии до и после оригиналов
-const before = originals.map(img => img.cloneNode(true));
-const after = originals.map(img => img.cloneNode(true));
+const before: HTMLElement[] = originals.map(img => img.cloneNode(true) as HTMLElement) ;
+const after: HTMLElement[] = originals.map(img => img.cloneNode(true) as HTMLElement) ;
 
 // Итог: копии → оригиналы → копии
 image1.prepend(...before);
 image1.append(...after);
 
-const slides = Array.from(image1.children);
+const slides: HTMLElement[] = Array.from(image1.children) as HTMLElement[];
 
 // Начинаем с первой оригинальной картинки
-let index = originalSlides;
-let timer;
-let isAnimating = false;
+let index: number  = originalSlides;
+let timer: ReturnType<typeof setInterval>;
+let isAnimating: boolean = false;
 
-function updateSlider(animate = true) {
+function updateSlider(animate: boolean = true): void {
     const slide = slides[index];
+    if(!slide) {
+        return;
+    }
 
-    const slideCenter = slide.offsetLeft + slide.offsetWidth / 2;
-    const sliderCenter = slider.clientWidth / 2;
-    const move = slideCenter - sliderCenter;
+    const slideCenter: number = slide.offsetLeft + slide.offsetWidth / 2;
+    const sliderCenter: number = slider.clientWidth / 2;
+    const move: number = slideCenter - sliderCenter;
 
     image1.style.transition = animate
         ? `transform ${transitionTime}ms ease`
@@ -42,7 +47,7 @@ function updateSlider(animate = true) {
     image1.style.transform = `translateX(-${move}px)`;
 }
 
-function nextSlide() {
+function nextSlide(): void {
       if (isAnimating) return;
 
     isAnimating = true;
@@ -59,7 +64,7 @@ function nextSlide() {
   }, transitionTime)
 }
 
- function rightSlide() {
+ function leftSlide(): void {
         if (isAnimating) return; 
         isAnimating = true;
     index--;
@@ -77,11 +82,11 @@ function nextSlide() {
 }
 timer = setInterval(nextSlide, intervalTime);
 
-left.addEventListener('click', () => {
+right.addEventListener('click', () => {
     nextSlide();
 });
-right.addEventListener('click', () => {   
-    rightSlide()
+left.addEventListener('click', () => {   
+    leftSlide()
 });
 updateSlider(false);
 
